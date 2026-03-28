@@ -1,0 +1,5 @@
+{
+  "ca-url": "https://localhost:9000",
+  "fingerprint": "82bb6bce8752b08929186ec0cdfdbb1117f6e48a5a78e0e25d083e84cf99ed9f",
+  "root": "/Users/dpalm/labs/tls-lab/ca/certs/root_ca.crt"
+}

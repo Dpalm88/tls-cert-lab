@@ -1,0 +1,51 @@
+{
+	"root": "/Users/dpalm/labs/tls-lab/ca/certs/root_ca.crt",
+	"federatedRoots": null,
+	"crt": "/Users/dpalm/labs/tls-lab/ca/certs/intermediate_ca.crt",
+	"key": "/Users/dpalm/labs/tls-lab/ca/secrets/intermediate_ca_key",
+	"address": ":9000",
+	"insecureAddress": "",
+	"dnsNames": [
+		"localhost"
+	],
+	"logger": {
+		"format": "text"
+	},
+	"db": {
+		"type": "badgerv2",
+		"dataSource": "/Users/dpalm/labs/tls-lab/ca/db",
+		"badgerFileLoadingMode": ""
+	},
+	"authority": {
+		"provisioners": [
+			{
+				"type": "JWK",
+				"name": "admin@lab.local",
+				"key": {
+					"use": "sig",
+					"kty": "EC",
+					"kid": "2K6rJaz_bfss_C23hCgiP-SXhHfB0DUdBuVSSvKm8mY",
+					"crv": "P-256",
+					"alg": "ES256",
+					"x": "4_TqARn1OEbZcu6UeSd7WRXRNQAhebHkudTX6yzBYM8",
+					"y": "coguhBri4-o7g6ssYiMQbkSwbmXslq56kzT5DEi4VOQ"
+				},
+				"encryptedKey": "eyJhbGciOiJQQkVTMi1IUzI1NitBMTI4S1ciLCJjdHkiOiJqd2sranNvbiIsImVuYyI6IkEyNTZHQ00iLCJwMmMiOjYwMDAwMCwicDJzIjoiUy1NOTdZYUJFM2UzWERNalZoNVBxZyJ9.GPWQVbm1AVyK48Dw-5lTqLZKv5wZOG8YrrKvJHUkG398u_GFOlvWLA.zNtTVIZ025enV2TO.ARA4WE14WSnQ_sp0Oc6JetfkeXL93YduiNbsrY-KVnbR5Iifw4iTZ5ciD3lIpbNOiIagqAgi2OeM0LZ99w275XKuShISQu_1b8eGjq49X34elCB33Zd5U4vyQZ65mRy_svoL0O8fcamT5nRx-ccgSErYVH_atTJ2veyT0yRjz8JN4qLa_S09pAKlehJhB6FCv90zTHVKOuirE5e84T8iB_9GdEAD_vi0l3yYKTAvLVueC0VNazX5hwyk2kdPWJxpuFnzm6FP56k3i5ExQahi9rIkmHLASTlH5lDWKWZaojkr-2IDx6U7u3camjL6FBQwMsmQLyXKTVcr7AB6wwE.wexjRTp427wp8z92Rx6VOg"
+			}
+		],
+ "claims": {
+    "minTLSCertDuration": "1m",
+    "maxTLSCertDuration": "2h",
+    "defaultTLSCertDuration": "5m"
+  }
+	},
+	"tls": {
+		"cipherSuites": [
+			"TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+			"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
+		],
+		"minVersion": 1.2,
+		"maxVersion": 1.3,
+		"renegotiation": false
+	}
+}

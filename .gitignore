@@ -1,0 +1,4 @@
+ca/secrets/
+ca/db/
+certs/*.key
+*.key
